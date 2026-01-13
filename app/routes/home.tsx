@@ -1,8 +1,6 @@
 import type { Route } from "./+types/home";
 import Navbar from "~/components/Navbar";
 import {resumes} from "../../constants";
-import {callbackify} from "node:util";
-import {Result} from "postcss";
 import ResumeCard from "~/components/ResumeCard";
 
 export function meta({}: Route.MetaArgs) {
