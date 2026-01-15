@@ -1,87 +1,80 @@
-# Welcome to React Router!
+# 📄 Resumind — AI Resume Analyzer & Application Tracker
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Resumind is a full-stack React application that helps users upload resumes, receive AI-powered feedback, and track job applications in one place.
+It supports authentication, persistent storage, resume previews, and ATS-focused analysis.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Built with React Router, TypeScript, TailwindCSS, and Puter for authentication, file storage, and KV persistence.
 
-## Features
+## ✨ Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+### 🔐 Authentication with Puter
 
-## Getting Started
+Log in / log out support
 
-### Installation
+User-specific resume data
 
-Install the dependencies:
+### 📤 Resume Upload
 
-```bash
-npm install
-```
+Upload PDF resumes
 
-### Development
+Convert first page to image preview
 
-Start the development server with HMR:
+### 🧠 AI Resume Feedback
 
-```bash
-npm run dev
-```
+Overall score
 
-Your application will be available at `http://localhost:5173`.
+ATS suitability
 
-## Building for Production
+Tone & style
 
-Create a production build:
+Content, structure, and skills analysis
 
-```bash
-npm run build
-```
+### 🗂️ Application Tracking
 
-## Deployment
+View all submitted resumes
 
-### Docker Deployment
+Resume preview cards with scores
 
-To build and run using Docker:
+### 👀 Demo Mode
 
-```bash
-docker build -t my-app .
+Logged-out users see example resumes
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+Logged-in users see only their own data
 
-The containerized application can be deployed to any platform that supports Docker, including:
+### ⚡ Fast Dev Experience
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+Hot Module Reloading (HMR)
 
-### DIY Deployment
+Server-side rendering via React Router
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+### 🎨 Modern UI
 
-Make sure to deploy the output of `npm run build`
+TailwindCSS
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+Animated cards and gradients
 
-## Styling
+### 🛠️ Tech Stack
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Frontend: React + TypeScript
 
----
+Routing & SSR: React Router
 
-Built with ❤️ using React Router.
+Styling: TailwindCSS
+
+Auth / Storage / KV: Puter
+
+PDF Processing: pdfjs-dist
+
+Build Tooling: Vite
+
+### 🚀 Getting Started
+1️⃣ Install Dependencies
+`npm install`
+
+2️⃣ Run in Development
+`npm run dev`
+
+
+The app will be available at:
+
+`http://localhost:5173`
