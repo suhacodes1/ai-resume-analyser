@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import { convertPdfToImage } from "~/lib/pdf2img";
 import { generateUUID } from "~/lib/utils";
 import { prepareInstructions } from "../../constants";
-import { AIResponseFormat } from "../../constants";
+import { useEffect } from "react";
 
 const Upload = () => {
   const { auth, isLoading, fs, ai, kv } = usePuterStore();
@@ -18,6 +18,11 @@ const Upload = () => {
   const handleFileSelect = (file: File | null) => {
     setFile(file);
   };
+  useEffect(() => {
+    if (!auth.isAuthenticated) {
+      navigate("/auth?next=/upload");
+    }
+  }, [auth.isAuthenticated, navigate]);
 
   const handleAnalyze = async ({
     companyName,
@@ -66,7 +71,7 @@ const Upload = () => {
 
     const feedback = await ai.feedback(
       uploadedFile.path,
-      prepareInstructions({ jobTitle, jobDescription, AIResponseFormat })
+      prepareInstructions({ jobTitle, jobDescription })
     );
     if (!feedback) return setStatusText("Error: Failed to analyze resume");
 
